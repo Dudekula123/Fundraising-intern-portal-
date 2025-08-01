@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rewards Center - InternImpact</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Finternimpa1369back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-surface shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="homepage.html" class="flex items-center space-x-2">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="text-xl font-bold text-primary font-accent">InternImpact</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth">Home</a>
+                    <a href="campaign_profiles.html" class="text-text-secondary hover:text-primary transition-smooth">Campaigns</a>
+                    <a href="leaderboard.html" class="text-text-secondary hover:text-primary transition-smooth">Leaderboard</a>
+                    <a href="rewards_center.html" class="text-primary font-semibold">Rewards</a>
+                    <a href="intern_dashboard.html" class="text-text-secondary hover:text-primary transition-smooth">Dashboard</a>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex items-center space-x-4">
+                    <a href="login_signup.html" class="text-primary hover:text-primary-700 font-semibold transition-smooth">Sign In</a>
+                    <a href="login_signup.html" class="btn-primary">Get Started</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-gray-500 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Points Balance -->
+    <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-text-primary mb-4 font-accent">
+                    Rewards <span class="text-primary">Center</span>
+                </h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Turn your impact into opportunities. Redeem points for career-boosting rewards and exclusive experiences.
+                </p>
+            </div>
+            
+            <!-- Current Status Dashboard -->
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <!-- Points Balance -->
+                <div class="card-elevated text-center">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                        </svg>
+                    </div>
+                    <div class="impact-counter text-accent" id="pointsBalance">2,847</div>
+                    <p class="text-text-secondary font-medium">Available Points</p>
+                </div>
+                
+                <!-- Current Level -->
+                <div class="card-elevated text-center">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <div class="text-3xl font-bold text-secondary mb-2 font-accent">Rising Star</div>
+                    <p class="text-text-secondary font-medium">Current Level</p>
+                </div>
+                
+                <!-- Next Milestone -->
+                <div class="card-elevated text-center">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <div class="text-3xl font-bold text-primary mb-2 font-accent">1,153</div>
+                    <p class="text-text-secondary font-medium">Points to Champion</p>
+                </div>
+            </div>
+            
+            <!-- Progress to Next Level -->
+            <div class="max-w-2xl mx-auto mt-8">
+                <div class="card">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm font-semibold text-text-primary">Progress to Champion Level</span>
+                        <span class="text-sm text-text-secondary">71% Complete</span>
+                    </div>
+                    <div class="progress-indicator mb-4">
+                        <div class="progress-bar" style="width: 71%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm text-text-secondary">
+                        <span>2,847 points earned</span>
+                        <span>4,000 points needed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reward Categories -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Category Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="btn-primary" id="professional-tab">Professional Development</button>
+                <button class="btn-secondary opacity-70 hover:opacity-100" id="networking-tab">Networking</button>
+                <button class="btn-accent opacity-70 hover:opacity-100" id="perks-tab">Platform Perks</button>
+            </div>
+            
+            <!-- Professional Development Rewards -->
+            <div id="professional-rewards" class="reward-category">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-text-primary mb-4">Professional Development</h2>
+                    <p class="text-text-secondary text-lg">Invest in your career growth with expert guidance and resources</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Resume Review -->
+                    <div class="card hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                            </div>
+                            <span class="bg-primary text-white text-sm px-3 py-1 rounded-full font-semibold">Popular</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Professional Resume Review</h3>
+                        <p class="text-text-secondary mb-4">Get your resume reviewed by industry experts with personalized feedback and optimization suggestions.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg font-bold text-accent">500 pts</span>
+                            </div>
+                            <button class="btn-primary text-sm py-2 px-4">Redeem Now</button>
+                        </div>
+                    </div>
+                    
+                    <!-- LinkedIn Optimization -->
+                    <div class="card hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                            <span class="bg-secondary text-white text-sm px-3 py-1 rounded-full font-semibold">New</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">LinkedIn Profile Optimization</h3>
+                        <p class="text-text-secondary mb-4">Professional LinkedIn makeover with keyword optimization and networking strategy guidance.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg font-bold text-accent">750 pts</span>
+                            </div>
+                            <button class="btn-primary text-sm py-2 px-4">Redeem Now</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Interview Coaching -->
+                    <div class="card hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                </svg>
+                            </div>
+                            <span class="bg-accent text-white text-sm px-3 py-1 rounded-full font-semibold">Limited</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">1-on-1 Interview Coaching</h3>
+                        <p class="text-text-secondary mb-4">Mock interviews with industry professionals plus personalized feedback and improvement strategies.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg font-bold text-accent">1,200 pts</span>
+                            </div>
+                            <button class="btn-primary text-sm py-2 px-4">Redeem Now</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Career Mentorship -->
+                    <div class="card hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                </svg>
+                            </div>
+                            <span class="bg-primary text-white text-sm px-3 py-1 rounded-full font-semibold">Premium</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">3-Month Career Mentorship</h3>
+                        <p class="text-text-secondary mb-4">Ongoing mentorship with industry leaders including monthly check-ins and career planning sessions.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg font-bold text-accent">2,500 pts</span>
+                            </div>
+                            <button class="btn-primary text-sm py-2 px-4 opacity-50 cursor-not-allowed" disabled>Insufficient Points</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Skills Assessment -->
+                    <div class="card hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Professional Skills Assessment</h3>
+                        <p class="text-text-secondary mb-4">Comprehensive evaluation of your skills with detailed report and improvement recommendations.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg font-bold text-accent">400 pts</span>
+                            </div>
+                            <button class="btn-primary text-sm py-2 px-4">Redeem Now</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Industry Certification -->
+                    <div class="card hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                                </svg>
+                            </div>
+                            <span class="bg-accent text-white text-sm px-3 py-1 rounded-full font-semibold">Exclusive</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Industry Certification Voucher</h3>
+                        <p class="text-text-secondary mb-4">Free voucher for professional certifications in project management, digital marketing, or data analysis.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg font-bold text-accent">1,800 pts</span>
+                            </div>
+                            <button class="btn-primary text-sm py-2 px-4">Redeem Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Networking Rewards (Hidden by default) -->
+            <div id="networking-rewards" class="reward-category hidden">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-text-primary mb-4">Networking Opportunities</h2>
+                    <p class="text-text-secondary text-lg">Connect with industry leaders and expand your professional network</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Exclusive Event Access -->
+                    <div class="card hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <span class="bg-secondary text-white text-sm px-3 py-1 rounded-full font-semibold">VIP</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Exclusive Networking Event</h3>
+                        <p class="text-text-secondary mb-4">Access to invite-only networking events with industry leaders and successful entrepreneurs.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg font-bold text-accent">1,500 pts</span>
+                            </div>
+                            <button class="btn-secondary text-sm py-2 px-4">Redeem Now</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Mentor Matching -->
+                    <div class="card hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
+                                </svg>
+                            </div>
+                            <span class="bg-primary text-white text-sm px-3 py-1 rounded-full font-semibold">Popular</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Premium Mentor Matching</h3>
+                        <p class="text-text-secondary mb-4">Get matched with a senior professional in your field for ongoing guidance and support.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg font-bold text-accent">2,000 pts</span>
+                            </div>
+                            <button class="btn-secondary text-sm py-2 px-4">Redeem Now</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Industry Connections -->
+                    <div class="card hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Industry Leader Introduction</h3>
+                        <p class="text-text-secondary mb-4">Personal introduction to C-level executives and industry leaders in your field of interest.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg font-bold text-accent">3,000 pts</span>
+                            </div>
+                            <button class="btn-secondary text-sm py-2 px-4 opacity-50 cursor-not-allowed" disabled>Insufficient Points</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Platform Perks (Hidden by default) -->
+            <div id="perks-rewards" class="reward-category hidden">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-text-primary mb-4">Platform Perks</h2>
+                    <p class="text-text-secondary text-lg">Unlock premium features and exclusive platform benefits</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Premium Badge -->
+                    <div class="card hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                            <span class="bg-accent text-white text-sm px-3 py-1 rounded-full font-semibold">Featured</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Premium Profile Badge</h3>
+                        <p class="text-text-secondary mb-4">Stand out with an exclusive premium badge on your profile and campaign pages.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg font-bold text-accent">300 pts</span>
+                            </div>
+                            <button class="btn-accent text-sm py-2 px-4">Redeem Now</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Early Access -->
+                    <div class="card hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <span class="bg-primary text-white text-sm px-3 py-1 rounded-full font-semibold">Beta</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Early Access Features</h3>
+                        <p class="text-text-secondary mb-4">Get first access to new platform features and beta testing opportunities.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg font-bold text-accent">600 pts</span>
+                            </div>
+                            <button class="btn-accent text-sm py-2 px-4">Redeem Now</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Custom Campaign Theme -->
+                    <div class="card hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-2">Custom Campaign Theme</h3>
+                        <p class="text-text-secondary mb-4">Personalize your campaign page with custom colors, fonts, and branding elements.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg font-bold text-accent">800 pts</span>
+                            </div>
+                            <button class="btn-accent text-sm py-2 px-4">Redeem Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievement Gallery -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-text-primary mb-4">Your Achievement Gallery</h2>
+                <p class="text-text-secondary text-lg">Showcase your accomplishments and track your progress</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Earned Achievement 1 -->
+                <div class="achievement-card">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text-primary mb-2">First Campaign</h3>
+                        <p class="text-sm text-text-secondary mb-2">Launched your first fundraising campaign</p>
+                        <div class="flex items-center justify-center space-x-2">
+                            <span class="text-xs bg-secondary-100 text-secondary-700 px-2 py-1 rounded-full">Earned</span>
+                            <span class="text-xs text-text-secondary">July 15, 2025</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Earned Achievement 2 -->
+                <div class="achievement-card">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text-primary mb-2">$1K Milestone</h3>
+                        <p class="text-sm text-text-secondary mb-2">Raised your first $1,000</p>
+                        <div class="flex items-center justify-center space-x-2">
+                            <span class="text-xs bg-accent-100 text-accent-700 px-2 py-1 rounded-full">Earned</span>
+                            <span class="text-xs text-text-secondary">July 22, 2025</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Locked Achievement 1 -->
+                <div class="card opacity-50">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text-primary mb-2">Social Butterfly</h3>
+                        <p class="text-sm text-text-secondary mb-2">Share campaign 50 times</p>
+                        <div class="flex items-center justify-center space-x-2">
+                            <span class="text-xs bg-gray-200 text-gray-600 px-2 py-1 rounded-full">Locked</span>
+                            <span class="text-xs text-text-secondary">32/50 shares</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Locked Achievement 2 -->
+                <div class="card opacity-50">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-text-primary mb-2">Network Builder</h3>
+                        <p class="text-sm text-text-secondary mb-2">Refer 10 new users</p>
+                        <div class="flex items-center justify-center space-x-2">
+                            <span class="text-xs bg-gray-200 text-gray-600 px-2 py-1 rounded-full">Locked</span>
+                            <span class="text-xs text-text-secondary">3/10 referrals</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Path to Success -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-text-primary mb-4">Path to Success</h2>
+                <p class="text-text-secondary text-lg">Understand the journey and unlock exclusive opportunities</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Level 1 - Completed -->
+                <div class="text-center">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-secondary text-white text-xs px-2 py-1 rounded-full font-semibold">
+                            Complete
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary mb-2">Newcomer</h3>
+                    <p class="text-sm text-text-secondary mb-4">0 - 500 points</p>
+                    <ul class="text-xs text-text-secondary space-y-1">
+                        <li>• Basic rewards access</li>
+                        <li>• Community support</li>
+                        <li>• Achievement tracking</li>
+                    </ul>
+                </div>
+                
+                <!-- Level 2 - Current -->
+                <div class="text-center">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-primary text-white text-xs px-2 py-1 rounded-full font-semibold">
+                            Current
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary mb-2">Rising Star</h3>
+                    <p class="text-sm text-text-secondary mb-4">501 - 2,000 points</p>
+                    <ul class="text-xs text-text-secondary space-y-1">
+                        <li>• Professional development</li>
+                        <li>• Networking events</li>
+                        <li>• Premium features</li>
+                    </ul>
+                </div>
+                
+                <!-- Level 3 - Next -->
+                <div class="text-center opacity-75">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-accent text-white text-xs px-2 py-1 rounded-full font-semibold">
+                            Next
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary mb-2">Champion</h3>
+                    <p class="text-sm text-text-secondary mb-4">2,001 - 5,000 points</p>
+                    <ul class="text-xs text-text-secondary space-y-1">
+                        <li>• Exclusive mentorship</li>
+                        <li>• Industry connections</li>
+                        <li>• Speaking opportunities</li>
+                    </ul>
+                </div>
+                
+                <!-- Level 4 - Future -->
+                <div class="text-center opacity-50">
+                    <div class="relative mb-6">
+                        <div class="w-20 h-20 bg-gray-400 rounded-full flex items-center justify-center mx-auto">
+                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gray-400 text-white text-xs px-2 py-1 rounded-full font-semibold">
+                            Locked
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-text-primary mb-2">Impact Leader</h3>
+                    <p class="text-sm text-text-secondary mb-4">5,001+ points</p>
+                    <ul class="text-xs text-text-secondary space-y-1">
+                        <li>• Board positions</li>
+                        <li>• Startup opportunities</li>
+                        <li>• Global recognition</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Point Earning System -->
+    <section class="py-16 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">How to Earn Points</h2>
+                <p class="text-primary-100 text-lg">Every action you take contributes to your success</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Fundraising -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Fundraising</h3>
+                    <p class="text-primary-100 mb-2">1 point per $1 raised</p>
+                    <p class="text-sm text-primary-200">Your primary source of points</p>
+                </div>
+                
+                <!-- Social Sharing -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Social Sharing</h3>
+                    <p class="text-primary-100 mb-2">10 points per share</p>
+                    <p class="text-sm text-primary-200">Spread awareness and earn</p>
+                </div>
+                
+                <!-- Referrals -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Referrals</h3>
+                    <p class="text-primary-100 mb-2">100 points per referral</p>
+                    <p class="text-sm text-primary-200">Grow the community</p>
+                </div>
+                
+                <!-- Engagement -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Engagement</h3>
+                    <p class="text-primary-100 mb-2">5-25 points per action</p>
+                    <p class="text-sm text-primary-200">Stay active and involved</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Testimonials -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-text-primary mb-4">Success Stories</h2>
+                <p class="text-text-secondary text-lg">See how rewards have transformed careers</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="card">
+                    <div class="flex items-start space-x-4">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616c9c0e5b5?q=80&w=2787&auto=format&fit=crop" alt="Sarah Chen" class="w-16 h-16 rounded-full object-cover" onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="flex-1">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <h3 class="font-semibold text-text-primary">Sarah Chen</h3>
+                                <span class="bg-secondary text-white text-xs px-2 py-1 rounded-full">Champion Level</span>
+                            </div>
+                            <p class="text-text-secondary mb-4">"The resume review I redeemed helped me land my dream internship at Google. The feedback was incredibly detailed and actionable. Worth every point!"</p>
+                            <div class="flex items-center space-x-4 text-sm text-text-secondary">
+                                <span>• Software Engineering Intern at Google</span>
+                                <span>• 4,200 points earned</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="card">
+                    <div class="flex items-start space-x-4">
+                        <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Marcus Johnson" class="w-16 h-16 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop'; this.onerror=null;" />
+                        <div class="flex-1">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <h3 class="font-semibold text-text-primary">Marcus Johnson</h3>
+                                <span class="bg-accent text-white text-xs px-2 py-1 rounded-full">Impact Leader</span>
+                            </div>
+                            <p class="text-text-secondary mb-4">"The networking event I attended through InternImpact connected me with my current mentor. That relationship has been invaluable for my career growth."</p>
+                            <div class="flex items-center space-x-4 text-sm text-text-secondary">
+                                <span>• Product Manager at Startup</span>
+                                <span>• 6,800 points earned</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Trust Signals -->
+            <div class="border-b border-gray-800 pb-8 mb-8">
+                <div class="text-center mb-6">
+                    <h3 class="text-lg font-semibold mb-4">Trusted by Leading Organizations</h3>
+                </div>
+                <div class="flex justify-center items-center space-x-8 opacity-60">
+                    <div class="text-sm font-semibold">UNICEF</div>
+                    <div class="text-sm font-semibold">RED CROSS</div>
+                    <div class="text-sm font-semibold">HABITAT FOR HUMANITY</div>
+                    <div class="text-sm font-semibold">TEACH FOR AMERICA</div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="text-lg font-bold font-accent">InternImpact</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Empowering the next generation to prove their impact through transparent, gamified social change.</p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="campaign_profiles.html" class="text-gray-400 hover:text-white transition-smooth">Browse Campaigns</a></li>
+                        <li><a href="leaderboard.html" class="text-gray-400 hover:text-white transition-smooth">Leaderboard</a></li>
+                        <li><a href="rewards_center.html" class="text-gray-400 hover:text-white transition-smooth">Rewards</a></li>
+                        <li><a href="intern_dashboard.html" class="text-gray-400 hover:text-white transition-smooth">Dashboard</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Safety Guidelines</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Community Guidelines</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Terms of Service</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Cookie Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Transparency Report</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Security Badges -->
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-400">SSL Secured</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-400">Verified Nonprofit</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400">© 2025 InternImpact. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tab Switching Script -->
+    <script>
+        // Tab switching functionality
+        function switchTab(activeTabId, activeContentId) {
+            // Hide all reward categories
+            const categories = document.querySelectorAll('.reward-category');
+            categories.forEach(category => category.classList.add('hidden'));
+            
+            // Show active category
+            document.getElementById(activeContentId).classList.remove('hidden');
+            
+            // Update tab styles
+            const tabs = document.querySelectorAll('[id$="-tab"]');
+            tabs.forEach(tab => {
+                tab.classList.remove('btn-primary', 'btn-secondary', 'btn-accent');
+                tab.classList.add('opacity-70', 'hover:opacity-100');
+                
+                if (tab.id === 'professional-tab') {
+                    tab.classList.add('btn-primary');
+                } else if (tab.id === 'networking-tab') {
+                    tab.classList.add('btn-secondary');
+                } else if (tab.id === 'perks-tab') {
+                    tab.classList.add('btn-accent');
+                }
+            });
+            
+            // Make active tab fully opaque and apply correct style
+            const activeTab = document.getElementById(activeTabId);
+            activeTab.classList.remove('opacity-70');
+        }
+        
+        // Add event listeners
+        document.getElementById('professional-tab').addEventListener('click', () => {
+            switchTab('professional-tab', 'professional-rewards');
+        });
+        
+        document.getElementById('networking-tab').addEventListener('click', () => {
+            switchTab('networking-tab', 'networking-rewards');
+        });
+        
+        document.getElementById('perks-tab').addEventListener('click', () => {
+            switchTab('perks-tab', 'perks-rewards');
+        });
+        
+        // Animate points counter on page load
+        function animateCounter(elementId, targetValue, duration = 2000) {
+            const element = document.getElementById(elementId);
+            const startValue = 0;
+            const increment = targetValue / (duration / 16);
+            let currentValue = startValue;
+            
+            const timer = setInterval(() => {
+                currentValue += increment;
+                if (currentValue >= targetValue) {
+                    currentValue = targetValue;
+                    clearInterval(timer);
+                }
+                
+                element.textContent = Math.floor(currentValue).toLocaleString();
+            }, 16);
+        }
+        
+        // Start animation when page loads
+        window.addEventListener('load', () => {
+            animateCounter('pointsBalance', 2847);
+        });
+        
+        // Add celebration animation to achievement cards
+        const achievementCards = document.querySelectorAll('.achievement-card');
+        achievementCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('animation-celebration');
+                setTimeout(() => {
+                    card.classList.remove('animation-celebration');
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>

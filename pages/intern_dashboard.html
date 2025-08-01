@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - InternImpact</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Finternimpa1369back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-surface shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="homepage.html" class="flex items-center space-x-2">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="text-xl font-bold text-primary font-accent">InternImpact</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth">Home</a>
+                    <a href="campaign_profiles.html" class="text-text-secondary hover:text-primary transition-smooth">Campaigns</a>
+                    <a href="leaderboard.html" class="text-text-secondary hover:text-primary transition-smooth">Leaderboard</a>
+                    <a href="rewards_center.html" class="text-text-secondary hover:text-primary transition-smooth">Rewards</a>
+                    <a href="intern_dashboard.html" class="text-primary font-semibold">Dashboard</a>
+                </div>
+                
+                <!-- User Profile -->
+                <div class="flex items-center space-x-4">
+                    <!-- Notifications -->
+                    <div class="relative">
+                        <button class="text-gray-500 hover:text-primary relative">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5zM10.5 3.5a6 6 0 0 1 6 6v2l1.5 3h-15l1.5-3v-2a6 6 0 0 1 6-6z"/>
+                            </svg>
+                            <span class="absolute -top-1 -right-1 bg-accent text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Profile Dropdown -->
+                    <div class="flex items-center space-x-2">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616c9c0e5b5?q=80&w=2787&auto=format&fit=crop" alt="Sarah Chen" class="w-8 h-8 rounded-full object-cover" onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <span class="text-text-primary font-semibold">Sarah Chen</span>
+                        <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-gray-500 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Welcome Section -->
+        <div class="mb-8">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold text-text-primary font-accent">Welcome back, Sarah! 👋</h1>
+                    <p class="text-text-secondary mt-2">You're making incredible progress on your Clean Water Initiative campaign</p>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <div class="text-center">
+                        <div class="text-sm text-text-secondary">Current Rank</div>
+                        <div class="text-2xl font-bold text-secondary">#3</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-sm text-text-secondary">Days Active</div>
+                        <div class="text-2xl font-bold text-primary">28</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Campaign Statistics Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <!-- Total Raised -->
+            <div class="card">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-text-secondary text-sm font-medium">Total Raised</p>
+                        <p class="text-3xl font-bold text-primary font-accent">$7,840</p>
+                        <p class="text-sm text-secondary">+$320 this week</p>
+                    </div>
+                    <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donors Acquired -->
+            <div class="card">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-text-secondary text-sm font-medium">Donors Acquired</p>
+                        <p class="text-3xl font-bold text-secondary font-accent">127</p>
+                        <p class="text-sm text-secondary">+8 this week</p>
+                    </div>
+                    <div class="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leaderboard Position -->
+            <div class="card">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-text-secondary text-sm font-medium">Leaderboard Position</p>
+                        <p class="text-3xl font-bold text-accent font-accent">#3</p>
+                        <p class="text-sm text-accent">↑ Moved up 2 spots</p>
+                    </div>
+                    <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Milestone -->
+            <div class="card">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-text-secondary text-sm font-medium">Next Milestone</p>
+                        <p class="text-3xl font-bold text-primary font-accent">$10K</p>
+                        <p class="text-sm text-primary">$2,160 to go</p>
+                    </div>
+                    <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Dashboard Grid -->
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Left Column - Campaign Overview & Tools -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Campaign Progress -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold text-text-primary">Campaign Progress</h2>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-sm text-text-secondary">Goal: $10,000</span>
+                            <button class="text-primary hover:text-primary-700">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Large Progress Visualization -->
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm font-medium text-text-secondary">Clean Water for Rural Schools</span>
+                            <span class="text-sm font-semibold text-secondary">78.4% Complete</span>
+                        </div>
+                        <div class="progress-indicator h-4 mb-4">
+                            <div class="progress-bar h-full" style="width: 78.4%"></div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold text-primary">$7,840</div>
+                                <div class="text-sm text-text-secondary">Raised</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-secondary">127</div>
+                                <div class="text-sm text-text-secondary">Supporters</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-accent">$2,160</div>
+                                <div class="text-sm text-text-secondary">To Goal</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone Celebration -->
+                    <div class="bg-secondary-50 border border-secondary-200 rounded-lg p-4 mb-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-secondary">Milestone Achieved!</h3>
+                                <p class="text-sm text-secondary-700">You've reached 75% of your goal! Keep up the amazing work!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Referral Tools -->
+                <div class="card">
+                    <h2 class="text-xl font-semibold text-text-primary mb-6">Referral Tools</h2>
+                    
+                    <!-- Referral Code -->
+                    <div class="bg-gray-50 rounded-lg p-4 mb-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <label class="text-sm font-medium text-text-secondary">Your Referral Code</label>
+                                <div class="text-lg font-mono font-bold text-primary">SARAH-WATER-2025</div>
+                            </div>
+                            <button class="btn-primary text-sm py-2 px-4" onclick="copyReferralCode()">
+                                <svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                </svg>
+                                Copy Code
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Social Sharing -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <button class="flex flex-col items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-smooth">
+                            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mb-2">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </div>
+                            <span class="text-sm font-medium">Facebook</span>
+                        </button>
+                        
+                        <button class="flex flex-col items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-smooth">
+                            <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-2">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                                </svg>
+                            </div>
+                            <span class="text-sm font-medium">Instagram</span>
+                        </button>
+                        
+                        <button class="flex flex-col items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-smooth">
+                            <div class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center mb-2">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                            <span class="text-sm font-medium">LinkedIn</span>
+                        </button>
+                        
+                        <button class="flex flex-col items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-smooth">
+                            <div class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center mb-2">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </div>
+                            <span class="text-sm font-medium">Twitter</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Analytics Section -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold text-text-primary">Campaign Analytics</h2>
+                        <select class="text-sm border border-gray-300 rounded-lg px-3 py-2">
+                            <option>Last 7 days</option>
+                            <option>Last 30 days</option>
+                            <option>All time</option>
+                        </select>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Traffic Sources -->
+                        <div>
+                            <h3 class="font-semibold text-text-primary mb-4">Traffic Sources</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-3 h-3 bg-primary rounded-full"></div>
+                                        <span class="text-sm">Social Media</span>
+                                    </div>
+                                    <span class="text-sm font-semibold">45%</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-3 h-3 bg-secondary rounded-full"></div>
+                                        <span class="text-sm">Direct Link</span>
+                                    </div>
+                                    <span class="text-sm font-semibold">32%</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-3 h-3 bg-accent rounded-full"></div>
+                                        <span class="text-sm">Email</span>
+                                    </div>
+                                    <span class="text-sm font-semibold">23%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Conversion Metrics -->
+                        <div>
+                            <h3 class="font-semibold text-text-primary mb-4">Key Metrics</h3>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-text-secondary">Conversion Rate</span>
+                                    <span class="text-sm font-semibold text-secondary">12.4%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-text-secondary">Avg. Donation</span>
+                                    <span class="text-sm font-semibold text-primary">$61.73</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-text-secondary">Return Donors</span>
+                                    <span class="text-sm font-semibold text-accent">18%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-text-secondary">Peak Hour</span>
+                                    <span class="text-sm font-semibold">7-9 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Notifications, Achievements, Quick Actions -->
+            <div class="space-y-8">
+                <!-- Real-time Notifications -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-semibold text-text-primary">Recent Activity</h2>
+                        <button class="text-sm text-primary hover:text-primary-700">View All</button>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <!-- New Donation -->
+                        <div class="flex items-start space-x-3 p-3 bg-secondary-50 rounded-lg">
+                            <div class="w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium text-text-primary">New donation received!</p>
+                                <p class="text-xs text-text-secondary">Michael Johnson donated $75 • 2 minutes ago</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Leaderboard Update -->
+                        <div class="flex items-start space-x-3 p-3 bg-accent-50 rounded-lg">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium text-text-primary">Leaderboard position updated!</p>
+                                <p class="text-xs text-text-secondary">You moved up to #3 • 1 hour ago</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Achievement Unlock -->
+                        <div class="flex items-start space-x-3 p-3 bg-primary-50 rounded-lg">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium text-text-primary">Achievement unlocked!</p>
+                                <p class="text-xs text-text-secondary">"Community Builder" badge earned • 3 hours ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement Badges -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-semibold text-text-primary">Achievements</h2>
+                        <a href="rewards_center.html" class="text-sm text-primary hover:text-primary-700">View All</a>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-3">
+                        <!-- Earned Badge -->
+                        <div class="text-center p-3 bg-secondary-50 rounded-lg">
+                            <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                            <p class="text-xs font-medium text-secondary">First $1K</p>
+                        </div>
+                        
+                        <!-- Earned Badge -->
+                        <div class="text-center p-3 bg-primary-50 rounded-lg">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                </svg>
+                            </div>
+                            <p class="text-xs font-medium text-primary">100 Donors</p>
+                        </div>
+                        
+                        <!-- Progress Badge -->
+                        <div class="text-center p-3 bg-gray-100 rounded-lg relative">
+                            <div class="w-12 h-12 bg-gray-400 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <p class="text-xs font-medium text-gray-600">Top 3</p>
+                            <div class="absolute inset-0 bg-gray-200 bg-opacity-50 rounded-lg flex items-center justify-center">
+                                <div class="text-xs font-semibold text-gray-700">78%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Donor Recognition Wall -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-semibold text-text-primary">Recent Supporters</h2>
+                        <button class="text-sm text-primary hover:text-primary-700">Thank All</button>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Michael Johnson" class="w-8 h-8 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop'; this.onerror=null;" />
+                                <div>
+                                    <p class="text-sm font-medium text-text-primary">Michael Johnson</p>
+                                    <p class="text-xs text-text-secondary">$75 • 2 min ago</p>
+                                </div>
+                            </div>
+                            <button class="text-primary hover:text-primary-700">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2961&auto=format&fit=crop" alt="Emily Davis" class="w-8 h-8 rounded-full object-cover" onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                                <div>
+                                    <p class="text-sm font-medium text-text-primary">Emily Davis</p>
+                                    <p class="text-xs text-text-secondary">$50 • 1 hour ago</p>
+                                </div>
+                            </div>
+                            <button class="text-primary hover:text-primary-700">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg" alt="Robert Wilson" class="w-8 h-8 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
+                                <div>
+                                    <p class="text-sm font-medium text-text-primary">Robert Wilson</p>
+                                    <p class="text-xs text-text-secondary">$100 • 2 hours ago</p>
+                                </div>
+                            </div>
+                            <button class="text-primary hover:text-primary-700">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="card">
+                    <h2 class="text-lg font-semibold text-text-primary mb-4">Quick Actions</h2>
+                    
+                    <div class="space-y-3">
+                        <button class="w-full btn-primary text-left flex items-center justify-between">
+                            <span>Share Campaign Update</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                            </svg>
+                        </button>
+                        
+                        <button class="w-full btn-secondary text-left flex items-center justify-between">
+                            <span>Send Thank You Notes</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </button>
+                        
+                        <a href="campaign_profiles.html" class="w-full btn-accent text-left flex items-center justify-between">
+                            <span>View Public Profile</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Rewards Preview -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-semibold text-text-primary">Rewards Status</h2>
+                        <a href="rewards_center.html" class="text-sm text-primary hover:text-primary-700">View Center</a>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-accent font-accent mb-2">2,840 Points</div>
+                        <p class="text-sm text-text-secondary mb-4">Available for redemption</p>
+                        
+                        <div class="bg-accent-50 border border-accent-200 rounded-lg p-3 mb-4">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
+                                </svg>
+                                <span class="text-sm font-medium text-accent">New reward unlocked!</span>
+                            </div>
+                            <p class="text-xs text-accent-700 mt-1">1-on-1 Mentorship Session Available</p>
+                        </div>
+                        
+                        <button class="w-full btn-accent text-sm py-2">Claim Rewards</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Trust Signals -->
+            <div class="border-b border-gray-800 pb-8 mb-8">
+                <div class="text-center mb-6">
+                    <h3 class="text-lg font-semibold mb-4">Trusted by Leading Organizations</h3>
+                </div>
+                <div class="flex justify-center items-center space-x-8 opacity-60">
+                    <div class="text-sm font-semibold">UNICEF</div>
+                    <div class="text-sm font-semibold">RED CROSS</div>
+                    <div class="text-sm font-semibold">HABITAT FOR HUMANITY</div>
+                    <div class="text-sm font-semibold">TEACH FOR AMERICA</div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="text-lg font-bold font-accent">InternImpact</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Empowering the next generation to prove their impact through transparent, gamified social change.</p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="campaign_profiles.html" class="text-gray-400 hover:text-white transition-smooth">Browse Campaigns</a></li>
+                        <li><a href="leaderboard.html" class="text-gray-400 hover:text-white transition-smooth">Leaderboard</a></li>
+                        <li><a href="rewards_center.html" class="text-gray-400 hover:text-white transition-smooth">Rewards</a></li>
+                        <li><a href="intern_dashboard.html" class="text-gray-400 hover:text-white transition-smooth">Dashboard</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Safety Guidelines</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Community Guidelines</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Terms of Service</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Cookie Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-smooth">Transparency Report</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Security Badges -->
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-400">SSL Secured</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-400">Verified Nonprofit</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400">© 2025 InternImpact. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactive Features -->
+    <script>
+        // Copy referral code functionality
+        function copyReferralCode() {
+            const referralCode = 'SARAH-WATER-2025';
+            navigator.clipboard.writeText(referralCode).then(() => {
+                // Show success feedback
+                const button = event.target.closest('button');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Copied!';
+                button.classList.add('bg-secondary', 'hover:bg-secondary-700');
+                button.classList.remove('bg-primary', 'hover:bg-primary-700');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('bg-secondary', 'hover:bg-secondary-700');
+                    button.classList.add('bg-primary', 'hover:bg-primary-700');
+                }, 2000);
+            });
+        }
+
+        // Animate progress bars on page load
+        window.addEventListener('load', () => {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        });
+
+        // Add celebration animation to milestone achievements
+        function celebrateMilestone() {
+            const milestoneCard = document.querySelector('.bg-secondary-50');
+            if (milestoneCard) {
+                milestoneCard.classList.add('animation-celebration');
+                setTimeout(() => {
+                    milestoneCard.classList.remove('animation-celebration');
+                }, 500);
+            }
+        }
+
+        // Simulate real-time notifications
+        function addNotification(type, message, time) {
+            const notificationContainer = document.querySelector('.space-y-4');
+            const notification = document.createElement('div');
+            
+            let bgColor, iconColor, icon;
+            switch(type) {
+                case 'donation':
+                    bgColor = 'bg-secondary-50';
+                    iconColor = 'bg-secondary';
+                    icon = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>';
+                    break;
+                case 'achievement':
+                    bgColor = 'bg-primary-50';
+                    iconColor = 'bg-primary';
+                    icon = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>';
+                    break;
+                default:
+                    bgColor = 'bg-accent-50';
+                    iconColor = 'bg-accent';
+                    icon = '<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>';
+            }
+            
+            notification.innerHTML = `
+                <div class="flex items-start space-x-3 p-3 ${bgColor} rounded-lg">
+                    <div class="w-8 h-8 ${iconColor} rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            ${icon}
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm font-medium text-text-primary">${message}</p>
+                        <p class="text-xs text-text-secondary">${time}</p>
+                    </div>
+                </div>
+            `;
+            
+            notificationContainer.insertBefore(notification, notificationContainer.firstChild);
+            
+            // Remove oldest notification if more than 5
+            if (notificationContainer.children.length > 5) {
+                notificationContainer.removeChild(notificationContainer.lastChild);
+            }
+        }
+
+        // Update notification badge count
+        function updateNotificationBadge(count) {
+            const badge = document.querySelector('.absolute.-top-1.-right-1');
+            if (badge) {
+                badge.textContent = count;
+            }
+        }
+
+        // Simulate periodic updates (for demo purposes)
+        setInterval(() => {
+            const notifications = [
+                { type: 'donation', message: 'New donation received!', time: 'Just now' },
+                { type: 'achievement', message: 'Achievement unlocked!', time: 'Just now' },
+                { type: 'leaderboard', message: 'Leaderboard position updated!', time: 'Just now' }
+            ];
+            
+            const randomNotification = notifications[Math.floor(Math.random() * notifications.length)];
+            // Uncomment the line below to enable periodic notifications
+            // addNotification(randomNotification.type, randomNotification.message, randomNotification.time);
+        }, 30000); // Every 30 seconds
+    </script>
+</body>
+</html>
