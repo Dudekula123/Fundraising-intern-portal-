@@ -34,15 +34,25 @@ yarn dev
 ## 📁 Project Structure
 
 ```
-html_app/
 ├── css/
-│   ├── tailwind.css   # Tailwind source file with custom utilities
-│   └── main.css       # Compiled CSS (generated)
-├── pages/             # HTML pages
-├── index.html         # Main entry point
-├── package.json       # Project dependencies and scripts
-└── tailwind.config.js # Tailwind CSS configuration
-```
+│ ├── main.css
+│ └── tailwind.css
+├── pages/
+│ ├── campaign_profiles.html
+│ ├── homepage.html
+│ ├── intern_dashboard.html
+│ ├── leaderboard.html
+│ ├── login_signup.html
+│ └── rewards_center.html
+├── public/
+│ ├── favicon.ico
+│ └── manifest.json
+├── .gitignore
+├── README.md
+├── index.html
+├── package.json
+├── package-lock.json
+├── tailwind.config.js
 
 ## 🎨 Styling
 
